@@ -1,0 +1,862 @@
+import java.util.Scanner;
+
+public class ListaDeExercicios {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // ------------------------------
+        // Exercício 1 - Soma de dois números
+        // ------------------------------
+        System.out.println("Exercício 1");
+        System.out.print("Digite o primeiro número: ");
+        int num1 = sc.nextInt();
+        System.out.print("Digite o segundo número: ");
+        int num2 = sc.nextInt();
+        int soma = num1 + num2;
+        System.out.println("A soma é: " + soma);
+
+        // ------------------------------
+        // Exercício 2 - Quatro operações
+        // ------------------------------
+        System.out.println("\nExercício 2");
+        System.out.print("Digite o primeiro número: ");
+        int n1 = sc.nextInt();
+        System.out.print("Digite o segundo número: ");
+        int n2 = sc.nextInt();
+        System.out.println("Soma: " + (n1 + n2));
+        System.out.println("Subtração: " + (n1 - n2));
+        System.out.println("Multiplicação: " + (n1 * n2));
+        if (n2 != 0) {
+            System.out.println("Divisão: " + ((double)n1 / n2));
+        } else {
+            System.out.println("Divisão impossível (divisor zero).");
+        }
+
+        // ------------------------------
+        // Exercício 3 - Consumo médio do automóvel
+        // ------------------------------
+        System.out.println("\nExercício 3");
+        System.out.print("Digite a distância total percorrida (km): ");
+        double distancia = sc.nextDouble();
+        System.out.print("Digite o total de combustível gasto (litros): ");
+        double combustivel = sc.nextDouble();
+        double consumoMedio = distancia / combustivel;
+        System.out.println("Consumo médio: " + consumoMedio + " km/l");
+
+        // ------------------------------
+        // Exercício 4 - Salário com comissão
+        // ------------------------------
+        System.out.println("\nExercício 4");
+        System.out.print("Nome do vendedor: ");
+        sc.nextLine(); // Consumir quebra de linha
+        String vendedor = sc.nextLine();
+        System.out.print("Salário fixo: ");
+        double salarioFixo = sc.nextDouble();
+        System.out.print("Total de vendas: ");
+        double vendas = sc.nextDouble();
+        double salarioFinal = salarioFixo + (vendas * 0.15);
+        System.out.println("Nome: " + vendedor);
+        System.out.println("Salário fixo: R$" + salarioFixo);
+        System.out.println("Salário final: R$" + salarioFinal);
+
+        // ------------------------------
+        // Exercício 5 - Média de três notas
+        // ------------------------------
+        System.out.println("\nExercício 5");
+        System.out.print("Nome do aluno: ");
+        sc.nextLine(); // Consumir quebra de linha
+        String aluno = sc.nextLine();
+        System.out.print("Nota 1: ");
+        double nota1 = sc.nextDouble();
+        System.out.print("Nota 2: ");
+        double nota2 = sc.nextDouble();
+        System.out.print("Nota 3: ");
+        double nota3 = sc.nextDouble();
+        double media = (nota1 + nota2 + nota3) / 3;
+        System.out.println("Aluno: " + aluno);
+        System.out.println("Média: " + media);
+
+        // ------------------------------
+        // Exercício 6 - Troca de valores
+        // ------------------------------
+        System.out.println("\nExercício 6");
+        System.out.print("Digite valor A: ");
+        int A = sc.nextInt();
+        System.out.print("Digite valor B: ");
+        int B = sc.nextInt();
+        int temp = A;
+        A = B;
+        B = temp;
+        System.out.println("Após troca, A = " + A + ", B = " + B);
+
+        // ------------------------------
+        // Exercício 7 - Conversão Celsius para Fahrenheit
+        // ------------------------------
+        System.out.println("\nExercício 7");
+        System.out.print("Digite a temperatura em Celsius: ");
+        double celsius = sc.nextDouble();
+        double fahrenheit = (9 * celsius + 160) / 5;
+        System.out.println("Temperatura em Fahrenheit: " + fahrenheit);
+
+        // ------------------------------
+        // Exercício 8 - Conversão de dólar para real
+        // ------------------------------
+        System.out.println("\nExercício 8");
+        System.out.print("Cotação do dólar: ");
+        double cotacao = sc.nextDouble();
+        System.out.print("Quantidade de dólares: ");
+        double dolares = sc.nextDouble();
+        double reais = cotacao * dolares;
+        System.out.println("Valor em reais: R$" + reais);
+
+        // ------------------------------
+        // Exercício 9 - Rendimento de depósito
+        // ------------------------------
+        System.out.println("\nExercício 9");
+        System.out.print("Digite o valor depositado: ");
+        double deposito = sc.nextDouble();
+        double rendimento = deposito * 0.007;
+        double total = deposito + rendimento;
+        System.out.println("Valor com rendimento após 1 mês: R$" + total);
+
+        // ------------------------------
+        // Exercício 10 - Prestação da compra
+        // ------------------------------
+        System.out.println("\nExercício 10");
+        System.out.print("Digite o valor da compra: ");
+        double compra = sc.nextDouble();
+        double prestacao = compra / 5;
+        System.out.println("Valor de cada prestação: R$" + prestacao);
+
+        // ------------------------------
+        // Exercício 11 - Preço de venda com acréscimo percentual
+        // ------------------------------
+        System.out.println("\nExercício 11");
+        System.out.print("Digite o preço de custo: ");
+        double precoCusto = sc.nextDouble();
+        System.out.print("Digite o percentual de acréscimo: ");
+        double percentual = sc.nextDouble();
+        double precoVenda = precoCusto + (precoCusto * percentual / 100);
+        System.out.println("Preço de venda: R$" + precoVenda);
+
+        // ------------------------------
+        // Exercício 12 - Custo ao consumidor de um carro
+        // ------------------------------
+        System.out.println("\nExercício 12");
+        System.out.print("Digite o custo de fábrica do carro: ");
+        double custoFabrica = sc.nextDouble();
+        double impostos = custoFabrica * 0.45;
+        double distribuidor = (custoFabrica + impostos) * 0.28;
+        double custoConsumidor = custoFabrica + impostos + distribuidor;
+        System.out.println("Custo ao consumidor: R$" + custoConsumidor);
+
+        // ------------------------------
+        // Exercício 13 - Número maior que 10
+        // ------------------------------
+        System.out.println("\nExercício 13");
+        System.out.print("Digite um número: ");
+        int numero = sc.nextInt();
+        if (numero > 10) {
+            System.out.println("Número maior que 10.");
+        }
+
+        // ------------------------------
+        // Exercício 14 - Maior de dois números distintos
+        // ------------------------------
+        System.out.println("\nExercício 14");
+        System.out.print("Digite o primeiro número: ");
+        int valor1 = sc.nextInt();
+        System.out.print("Digite o segundo número: ");
+        int valor2 = sc.nextInt();
+        if (valor1 > valor2) {
+            System.out.println("Maior: " + valor1);
+        } else {
+            System.out.println("Maior: " + valor2);
+        }
+
+        // ------------------------------
+        // Exercício 15 - Número entre 100 e 200
+        // ------------------------------
+        System.out.println("\nExercício 15");
+        System.out.print("Digite um número: ");
+        int numIntervalo = sc.nextInt();
+        if (numIntervalo >= 100 && numIntervalo <= 200) {
+            System.out.println("Número está entre 100 e 200.");
+        } else {
+            System.out.println("Número fora do intervalo.");
+        }
+
+        // ------------------------------
+        // Exercício 16 - Média e situação do aluno
+        // ------------------------------
+        System.out.println("\nExercício 16");
+        System.out.print("Nome do aluno: ");
+        sc.nextLine(); // Consumir quebra de linha
+        String nomeAluno = sc.nextLine();
+        System.out.print("Nota 1: ");
+        double n1Aluno = sc.nextDouble();
+        System.out.print("Nota 2: ");
+        double n2Aluno = sc.nextDouble();
+        System.out.print("Nota 3: ");
+        double n3Aluno = sc.nextDouble();
+        double mediaAluno = (n1Aluno + n2Aluno + n3Aluno) / 3;
+        System.out.println("Aluno: " + nomeAluno);
+        if (mediaAluno >= 7) {
+            System.out.println("Situação: Aprovado");
+        } else if (mediaAluno <= 5) {
+            System.out.println("Situação: Reprovado");
+        } else {
+            System.out.println("Situação: Recuperação");
+        }
+
+        // ------------------------------
+        // Exercício 17 - Números entre 10 e 150
+        // ------------------------------
+        System.out.println("\nExercício 17");
+        int contador = 0;
+        for (int i = 1; i <= 80; i++) {
+            System.out.print("Digite o " + i + "º número: ");
+            int num = sc.nextInt();
+            if (num >= 10 && num <= 150) {
+                contador++;
+            }
+        }
+        System.out.println("Quantidade de números entre 10 e 150: " + contador);
+
+        // ------------------------------
+        // Exercício 18 - Maioridade de 75 pessoas
+        // ------------------------------
+        System.out.println("\nExercício 18");
+        for (int i = 1; i <= 75; i++) {
+            System.out.print("Digite a idade da pessoa " + i + ": ");
+            int idade = sc.nextInt();
+            if (idade >= 18) {
+                System.out.println("Maior de idade.");
+            } else {
+                System.out.println("Menor de idade.");
+            }
+        }
+
+        // ------------------------------
+        // Exercício 19 - Sexo de 56 pessoas
+        // ------------------------------
+        System.out.println("\nExercício 19");
+        int homens = 0, mulheres = 0;
+        for (int i = 1; i <= 56; i++) {
+            System.out.print("Nome da pessoa " + i + ": ");
+            sc.nextLine(); // Consumir quebra de linha
+            String nome = sc.nextLine();
+            System.out.print("Sexo (M/F): ");
+            char sexo = sc.next().charAt(0);
+            if (sexo == 'M' || sexo == 'm') {
+                homens++;
+                System.out.println(nome + " é homem.");
+            } else if (sexo == 'F' || sexo == 'f') {
+                mulheres++;
+                System.out.println(nome + " é mulher.");
+            } else {
+                System.out.println("Sexo inválido.");
+            }
+        }
+        System.out.println("Total de homens: " + homens);
+        System.out.println("Total de mulheres: " + mulheres);
+
+        // ------------------------------
+        // Exercício 20 - Desconto na concessionária CARANGO VELHO
+        // ------------------------------
+        System.out.println("\nExercício 20");
+        int totalCarros2000 = 0, totalGeral = 0;
+        char continuar;
+        do {
+            System.out.print("Digite o ano do veículo: ");
+            int ano = sc.nextInt();
+            System.out.print("Digite o valor do veículo: ");
+            double valor = sc.nextDouble();
+            double desconto;
+            if (ano <= 2000) {
+                desconto = valor * 0.12;
+                totalCarros2000++;
+            } else {
+                desconto = valor * 0.07;
+            }
+            double valorFinal = valor - desconto;
+            System.out.println("Desconto: R$" + desconto);
+            System.out.println("Valor a ser pago: R$" + valorFinal);
+            totalGeral++;
+            System.out.print("Deseja continuar calculando desconto? (S/N): ");
+            continuar = sc.next().charAt(0);
+        } while (continuar == 'S' || continuar == 's');
+        System.out.println("Total de carros até ano 2000: " + totalCarros2000);
+        System.out.println("Total de carros no geral: " + totalGeral);
+
+        // ------------------------------
+        // Exercício 21 - Serviço militar obrigatório
+        // ------------------------------
+        System.out.println("\nExercício 21");
+        System.out.print("Digite a quantidade de pessoas: ");
+        int nPessoas = sc.nextInt();
+        for (int i = 1; i <= nPessoas; i++) {
+            System.out.print("Nome: ");
+            sc.nextLine(); // Consumir quebra de linha
+            String nome = sc.nextLine();
+            System.out.print("Sexo (M/F): ");
+            char sexo = sc.next().charAt(0);
+            System.out.print("Idade: ");
+            int idade = sc.nextInt();
+            System.out.print("Saúde (Boa/Ruim): ");
+            sc.nextLine(); // Consumir quebra de linha
+            String saude = sc.nextLine();
+            if (sexo == 'M' || sexo == 'm') {
+                if (idade >= 18 && idade <= 45 && saude.equalsIgnoreCase("Boa")) {
+                    System.out.println(nome + " está apto para o serviço militar.");
+                } else {
+                    System.out.println(nome + " não está apto para o serviço militar.");
+                }
+            } else {
+                System.out.println(nome + " não está apto (sexo feminino).");
+            }
+        }
+
+        // ------------------------------
+        // Exercício 22 - Lucro ou prejuízo de produtos
+        // ------------------------------
+        System.out.println("\nExercício 22");
+        double somaCusto = 0, somaVenda = 0;
+        for (int i = 1; i <= 40; i++) {
+            System.out.print("Preço de custo do produto " + i + ": ");
+            double custoProduto = sc.nextDouble();
+            System.out.print("Preço de venda do produto " + i + ": ");
+            double vendaProduto = sc.nextDouble();
+            somaCusto += custoProduto;
+            somaVenda += vendaProduto;
+            if (vendaProduto > custoProduto) {
+                System.out.println("Lucro.");
+            } else if (vendaProduto < custoProduto) {
+                System.out.println("Prejuízo.");
+            } else {
+                System.out.println("Empate.");
+            }
+        }
+        System.out.println("Média do preço de custo: R$" + (somaCusto / 40));
+        System.out.println("Média do preço de venda: R$" + (somaVenda / 40));
+
+        // ------------------------------
+        // Exercício 23 - Número especial
+        // ------------------------------
+        System.out.println("\nExercício 23");
+        System.out.print("Digite um número: ");
+        int especial = sc.nextInt();
+        if (especial > 80) {
+            System.out.println("Maior que 80.");
+        } else if (especial < 25) {
+            System.out.println("Menor que 25.");
+        } else if (especial == 40) {
+            System.out.println("Igual a 40.");
+        }
+
+        // ------------------------------
+        // Exercício 24 - N números (positivo, negativo ou zero)
+        // ------------------------------
+        System.out.println("\nExercício 24");
+        System.out.print("Digite a quantidade de números: ");
+        int quantidade = sc.nextInt();
+        for (int i = 1; i <= quantidade; i++) {
+            System.out.print("Digite o " + i + "º número: ");
+            int valor = sc.nextInt();
+            if (valor > 0) {
+                System.out.println("Positivo.");
+            } else if (valor < 0) {
+                System.out.println("Negativo.");
+            } else {
+                System.out.println("Zero.");
+            }
+        }
+
+        // ------------------------------
+        // Exercício 25 - Comparação de dois números
+        // ------------------------------
+        System.out.println("\nExercício 25");
+        System.out.print("Digite o primeiro número: ");
+        int numA = sc.nextInt();
+        System.out.print("Digite o segundo número: ");
+        int numB = sc.nextInt();
+        if (numA == numB) {
+            System.out.println("Números iguais.");
+        } else {
+            System.out.println("Números diferentes.");
+            if (numA > numB) {
+                System.out.println("Maior: " + numA);
+            } else {
+                System.out.println("Maior: " + numB);
+            }
+        }
+
+        // ------------------------------
+        // Exercício 26 - Número por extenso
+        // ------------------------------
+        System.out.println("\nExercício 26");
+        System.out.print("Digite um número de 1 a 5: ");
+        int numeroExtenso = sc.nextInt();
+        switch (numeroExtenso) {
+            case 1:
+                System.out.println("Um");
+                break;
+            case 2:
+                System.out.println("Dois");
+                break;
+            case 3:
+                System.out.println("Três");
+                break;
+            case 4:
+                System.out.println("Quatro");
+                break;
+            case 5:
+                System.out.println("Cinco");
+                break;
+            default:
+                System.out.println("Número inválido.");
+        }
+
+        // ------------------------------
+        // Exercício 27 - Concessionária CARANGO (desconto por combustível)
+        // ------------------------------
+        System.out.println("\nExercício 27");
+        double totalDesconto = 0, totalPago = 0;
+        double valorVeiculo;
+        do {
+            System.out.print("Digite o valor do veículo (0 para encerrar): ");
+            valorVeiculo = sc.nextDouble();
+            if (valorVeiculo == 0) {
+                break;
+            }
+            System.out.print("Tipo de combustível (Álcool, Gasolina, Diesel): ");
+            sc.nextLine(); // Consumir quebra de linha
+            String combustivel = sc.nextLine();
+            double desconto;
+            if (combustivel.equalsIgnoreCase("Alcool")) {
+                desconto = valorVeiculo * 0.25;
+            } else if (combustivel.equalsIgnoreCase("Gasolina")) {
+                desconto = valorVeiculo * 0.21;
+            } else if (combustivel.equalsIgnoreCase("Diesel")) {
+                desconto = valorVeiculo * 0.14;
+            } else {
+                desconto = 0;
+            }
+            double valorFinal = valorVeiculo - desconto;
+            totalDesconto += desconto;
+            totalPago += valorFinal;
+            System.out.println("Desconto: R$" + desconto);
+            System.out.println("Valor a ser pago: R$" + valorFinal);
+        } while (valorVeiculo != 0);
+        System.out.println("Total de desconto concedido: R$" + totalDesconto);
+        System.out.println("Total pago pelos clientes: R$" + totalPago);
+
+        // ------------------------------
+        // Exercício 28 - Reajuste salarial
+        // ------------------------------
+        System.out.println("\nExercício 28");
+        System.out.print("Digite o valor do salário mínimo: ");
+        double salarioMinimo = sc.nextDouble();
+        double aumentoFolha = 0;
+        for (int i = 1; i <= 584; i++) {
+            System.out.print("Nome do funcionário " + i + ": ");
+            sc.nextLine(); // Consumir quebra de linha
+            String nomeFuncionario = sc.nextLine();
+            System.out.print("Salário atual: ");
+            double salario = sc.nextDouble();
+            double reajuste;
+            if (salario < 3 * salarioMinimo) {
+                reajuste = salario * 0.5;
+            } else if (salario <= 10 * salarioMinimo) {
+                reajuste = salario * 0.2;
+            } else if (salario <= 20 * salarioMinimo) {
+                reajuste = salario * 0.15;
+            } else {
+                reajuste = salario * 0.1;
+            }
+            double novoSalario = salario + reajuste;
+            aumentoFolha += reajuste;
+            System.out.println("Nome: " + nomeFuncionario);
+            System.out.println("Novo salário: R$" + novoSalario);
+        }
+        System.out.println("Aumento total na folha de pagamento: R$" + aumentoFolha);
+
+        // ------------------------------
+        // Exercício 29 - Mês correspondente
+        // ------------------------------
+        System.out.println("\nExercício 29");
+        System.out.print("Digite o número do mês (1-12): ");
+        int mes = sc.nextInt();
+        String[] meses = {"Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+                          "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"};
+        if (mes >= 1 && mes <= 12) {
+            System.out.println("Mês: " + meses[mes - 1]);
+        } else {
+            System.out.println("Mês inválido.");
+        }
+
+        // ------------------------------
+        // Exercício 30 - Nome, idade, sexo e salário líquido
+        // ------------------------------
+        System.out.println("\nExercício 30");
+        System.out.print("Nome do funcionário: ");
+        sc.nextLine(); // Consumir quebra de linha
+        String nomeFunc = sc.nextLine();
+        System.out.print("Idade: ");
+        int idadeFunc = sc.nextInt();
+        System.out.print("Sexo (M/F): ");
+        char sexoFunc = sc.next().charAt(0);
+        System.out.print("Salário fixo: ");
+        double salarioFunc = sc.nextDouble();
+        System.out.println("Nome: " + nomeFunc);
+        System.out.println("Salário líquido: R$" + salarioFunc);
+
+        // ------------------------------
+        // Exercício 31 - Três valores em ordem crescente
+        // ------------------------------
+        System.out.println("\nExercício 31");
+        System.out.print("Digite o primeiro valor: ");
+        int val1 = sc.nextInt();
+        System.out.print("Digite o segundo valor: ");
+        int val2 = sc.nextInt();
+        System.out.print("Digite o terceiro valor: ");
+        int val3 = sc.nextInt();
+        int menor = Math.min(val1, Math.min(val2, val3));
+        int maior = Math.max(val1, Math.max(val2, val3));
+        int meio = (val1 + val2 + val3) - menor - maior;
+        System.out.println("Ordem crescente: " + menor + ", " + meio + ", " + maior);
+
+        // ------------------------------
+        // Exercício 32 - Operação entre dois valores
+        // ------------------------------
+        System.out.println("\nExercício 32");
+        System.out.print("Digite o primeiro valor: ");
+        double Aop = sc.nextDouble();
+        System.out.print("Digite o segundo valor: ");
+        double Bop = sc.nextDouble();
+        System.out.print("Digite o operador (+, -, *, /): ");
+        sc.nextLine(); // Consumir quebra de linha
+        char operador = sc.nextLine().charAt(0);
+        switch (operador) {
+            case '+':
+                System.out.println("Resultado: " + (Aop + Bop));
+                break;
+            case '-':
+                System.out.println("Resultado: " + (Aop - Bop));
+                break;
+            case '*':
+                System.out.println("Resultado: " + (Aop * Bop));
+                break;
+            case '/':
+                if (Bop != 0) {
+                    System.out.println("Resultado: " + (Aop / Bop));
+                } else {
+                    System.out.println("Erro: Divisão por zero.");
+                }
+                break;
+            default:
+                System.out.println("Operador não definido.");
+        }
+
+        // ------------------------------
+        // Exercício 33 - Tipos de triângulo
+        // ------------------------------
+        System.out.println("\nExercício 33");
+        System.out.print("Digite o lado A: ");
+        int ladoA = sc.nextInt();
+        System.out.print("Digite o lado B: ");
+        int ladoB = sc.nextInt();
+        System.out.print("Digite o lado C: ");
+        int ladoC = sc.nextInt();
+        if (ladoA < ladoB + ladoC && ladoB < ladoA + ladoC && ladoC < ladoA + ladoB) {
+            if (ladoA == ladoB && ladoB == ladoC) {
+                System.out.println("Triângulo Equilátero");
+            } else if (ladoA == ladoB || ladoA == ladoC || ladoB == ladoC) {
+                System.out.println("Triângulo Isósceles");
+            } else {
+                System.out.println("Triângulo Escaleno");
+            }
+        } else {
+            System.out.println("Não formam um triângulo.");
+        }
+
+        // ------------------------------
+        // Exercício 34 - Salário do professor
+        // ------------------------------
+        System.out.println("\nExercício 34");
+        System.out.print("Digite o nível do professor (1, 2 ou 3): ");
+        int nivel = sc.nextInt();
+        System.out.print("Quantidade de horas/aula: ");
+        int horas = sc.nextInt();
+        double valorHora;
+        if (nivel == 1) {
+            valorHora = 12.00;
+        } else if (nivel == 2) {
+            valorHora = 17.00;
+        } else if (nivel == 3) {
+            valorHora = 25.00;
+        } else {
+            valorHora = 0;
+        }
+        double salarioProf = valorHora * horas;
+        System.out.println("Salário: R$" + salarioProf);
+
+        // ------------------------------
+        // Exercício 35 - Categoria de nadadores
+        // ------------------------------
+        System.out.println("\nExercício 35");
+        System.out.print("Digite a idade do nadador: ");
+        int idadeNadador = sc.nextInt();
+        if (idadeNadador >= 5 && idadeNadador <= 7) {
+            System.out.println("Infantil A");
+        } else if (idadeNadador >= 8 && idadeNadador <= 10) {
+            System.out.println("Infantil B");
+        } else if (idadeNadador >= 11 && idadeNadador <= 13) {
+            System.out.println("Juvenil A");
+        } else if (idadeNadador >= 14 && idadeNadador <= 17) {
+            System.out.println("Juvenil B");
+        } else if (idadeNadador >= 18 && idadeNadador <= 25) {
+            System.out.println("Sênior");
+        } else {
+            System.out.println("Idade fora da faixa etária.");
+        }
+
+        // ------------------------------
+        // Exercício 36 - Conta de luz
+        // ------------------------------
+        System.out.println("\nExercício 36");
+        System.out.print("Digite o tipo de cliente (1-Residência, 2-Comércio, 3-Indústria): ");
+        int tipoCliente = sc.nextInt();
+        System.out.print("Digite a quantidade de kWh consumida: ");
+        double consumo = sc.nextDouble();
+        double valorKwh;
+        if (tipoCliente == 1) {
+            valorKwh = 0.60;
+        } else if (tipoCliente == 2) {
+            valorKwh = 0.48;
+        } else if (tipoCliente == 3) {
+            valorKwh = 1.29;
+        } else {
+            valorKwh = 0;
+        }
+        double valorConta = consumo * valorKwh;
+        System.out.println("Valor da conta: R$" + valorConta);
+
+        // ------------------------------
+        // Exercício 37 - Peso ideal
+        // ------------------------------
+        System.out.println("\nExercício 37");
+        System.out.print("Nome: ");
+        sc.nextLine(); // Consumir quebra de linha
+        String nomePessoa = sc.nextLine();
+        System.out.print("Sexo (M/F): ");
+        char sexoPessoa = sc.next().charAt(0);
+        System.out.print("Altura (em metros): ");
+        double altura = sc.nextDouble();
+        System.out.print("Idade: ");
+        int idade = sc.nextInt();
+        double pesoIdeal;
+        if (sexoPessoa == 'M' || sexoPessoa == 'm') {
+            if (idade <= 20) {
+                pesoIdeal = (72.7 * altura) - 58;
+            } else if (idade <= 39) {
+                pesoIdeal = (72.7 * altura) - 53;
+            } else {
+                pesoIdeal = (72.7 * altura) - 45;
+            }
+        } else {
+            if (idade <= 20) {
+                pesoIdeal = (62.1 * altura) - 44.7;
+            } else if (idade <= 39) {
+                pesoIdeal = (62.1 * altura) - 45;
+            } else {
+                pesoIdeal = (62.1 * altura) - 49;
+            }
+        }
+        System.out.println(nomePessoa + ", seu peso ideal é: " + pesoIdeal + " kg");
+
+        // ------------------------------
+        // Exercício 38 - Média ponderada de três notas
+        // ------------------------------
+        System.out.println("\nExercício 38");
+        System.out.print("Nota do trabalho de laboratório: ");
+        double notaLab = sc.nextDouble();
+        System.out.print("Nota da avaliação semestral: ");
+        double notaSem = sc.nextDouble();
+        System.out.print("Nota do exame final: ");
+        double notaFinal = sc.nextDouble();
+        double mediaPonderada = (notaLab * 2 + notaSem * 3 + notaFinal * 5) / 10;
+        System.out.println("Nota final: " + mediaPonderada);
+
+        // ------------------------------
+        // Exercício 39 - Classificação de estudantes
+        // ------------------------------
+        System.out.println("\nExercício 39");
+        System.out.print("Nome do estudante: ");
+        sc.nextLine(); // Consumir quebra de linha
+        String nomeEstudante = sc.nextLine();
+        System.out.print("Número de matrícula: ");
+        String matricula = sc.nextLine();
+        System.out.print("Nota laboratório: ");
+        double notaL = sc.nextDouble();
+        System.out.print("Nota avaliação: ");
+        double notaA = sc.nextDouble();
+        System.out.print("Nota exame: ");
+        double notaE = sc.nextDouble();
+        double notaFinalEstudante = (notaL * 2 + notaA * 3 + notaE * 5) / 10;
+        String classificacao;
+        if (notaFinalEstudante >= 8) {
+            classificacao = "A";
+        } else if (notaFinalEstudante >= 7) {
+            classificacao = "B";
+        } else if (notaFinalEstudante >= 6) {
+            classificacao = "C";
+        } else if (notaFinalEstudante >= 5) {
+            classificacao = "D";
+        } else {
+            classificacao = "R";
+        }
+        System.out.println("Nome: " + nomeEstudante);
+        System.out.println("Matrícula: " + matricula);
+        System.out.println("Nota final: " + notaFinalEstudante);
+        System.out.println("Classificação: " + classificacao);
+
+        // ------------------------------
+        // Exercício 40 - Categoria de seguro
+        // ------------------------------
+        System.out.println("\nExercício 40");
+        System.out.print("Nome: ");
+        sc.nextLine(); // Consumir quebra de linha
+        String nomeSegurado = sc.nextLine();
+        System.out.print("Idade: ");
+        int idadeSegurado = sc.nextInt();
+        if (idadeSegurado >= 17 && idadeSegurado <= 70) {
+            System.out.print("Grupo de risco (1, 2, 3): ");
+            int grupoRisco = sc.nextInt();
+            String categoria = "";
+            if (idadeSegurado >= 17 && idadeSegurado <= 20) {
+                if (grupoRisco == 1) categoria = "Categoria 1";
+                else if (grupoRisco == 2) categoria = "Categoria 2";
+                else categoria = "Categoria 3";
+            }
+            else if (idadeSegurado >= 21 && idadeSegurado <= 24) {
+                if (grupoRisco == 1) categoria = "Categoria 2";
+                else if (grupoRisco == 2) categoria = "Categoria 3";
+                else categoria = "Categoria 4";
+            }
+            else if (idadeSegurado >= 25 && idadeSegurado <= 34) {
+                if (grupoRisco == 1) categoria = "Categoria 3";
+                else if (grupoRisco == 2) categoria = "Categoria 4";
+                else categoria = "Categoria 5";
+            }
+            else if (idadeSegurado >= 35 && idadeSegurado <= 64) {
+                if (grupoRisco == 1) categoria = "Categoria 4";
+                else if (grupoRisco == 2) categoria = "Categoria 5";
+                else categoria = "Categoria 6";
+            }
+            else { // 65 a 70
+                if (grupoRisco == 1) categoria = "Categoria 7";
+                else if (grupoRisco == 2) categoria = "Categoria 8";
+                else categoria = "Categoria 9";
+            }
+            System.out.println(nomeSegurado + " está na " + categoria);
+        } else {
+            System.out.println("Idade fora da faixa para seguro.");
+        }
+
+        // ------------------------------
+        // Exercício 41 - Verificar número perfeito
+        // ------------------------------
+        System.out.println("\nExercício 41");
+        System.out.print("Digite um número para verificar se é perfeito: ");
+        int numeroPerfeito = sc.nextInt();
+        int somaDivisores = 0;
+        for (int i = 1; i < numeroPerfeito; i++) {
+            if (numeroPerfeito % i == 0) {
+                somaDivisores += i;
+            }
+        }
+        if (somaDivisores == numeroPerfeito) {
+            System.out.println(numeroPerfeito + " é um número perfeito.");
+        } else {
+            System.out.println(numeroPerfeito + " não é um número perfeito.");
+        }
+
+        // ------------------------------
+        // Exercício 42 - Ordenar três valores
+        // ------------------------------
+        System.out.println("\nExercício 42");
+        System.out.print("Digite o primeiro número: ");
+        int n1Ordenado = sc.nextInt();
+        System.out.print("Digite o segundo número: ");
+        int n2Ordenado = sc.nextInt();
+        System.out.print("Digite o terceiro número: ");
+        int n3Ordenado = sc.nextInt();
+        int menorOrdenado = Math.min(n1Ordenado, Math.min(n2Ordenado, n3Ordenado));
+        int maiorOrdenado = Math.max(n1Ordenado, Math.max(n2Ordenado, n3Ordenado));
+        int meioOrdenado = (n1Ordenado + n2Ordenado + n3Ordenado) - menorOrdenado - maiorOrdenado;
+        System.out.println("Ordem crescente: " + menorOrdenado + ", " + meioOrdenado + ", " + maiorOrdenado);
+
+        // ------------------------------
+        // Exercício 43 - Tabuada personalizada
+        // ------------------------------
+        System.out.println("\nExercício 43");
+        System.out.print("Digite o número base (N): ");
+        int nTabuada = sc.nextInt();
+        System.out.print("Digite o operador (+, -, *, /): ");
+        sc.nextLine(); // Consumir quebra de linha
+        char operadorTabuada = sc.nextLine().charAt(0);
+        System.out.print("Digite até qual número (T): ");
+        int tTabuada = sc.nextInt();
+        for (int i = 1; i <= tTabuada; i++) {
+            switch (operadorTabuada) {
+                case '+':
+                    System.out.println(nTabuada + " + " + i + " = " + (nTabuada + i));
+                    break;
+                case '-':
+                    System.out.println(nTabuada + " - " + i + " = " + (nTabuada - i));
+                    break;
+                case '*':
+                    System.out.println(nTabuada + " * " + i + " = " + (nTabuada * i));
+                    break;
+                case '/':
+                    if (i != 0) {
+                        System.out.println(nTabuada + " / " + i + " = " + ((double) nTabuada / i));
+                    } else {
+                        System.out.println("Divisão por zero não permitida.");
+                    }
+                    break;
+                default:
+                    System.out.println("Operador inválido.");
+                    i = tTabuada; // Terminar o laço
+            }
+        }
+
+        // ------------------------------
+        // Exercício 44 - Série com fatoriais
+        // ------------------------------
+        System.out.println("\nExercício 44");
+        System.out.print("Digite o valor de N: ");
+        int nSerie = sc.nextInt();
+        double somaSerie = 1.0;
+        int fatorial = 1;
+        for (int i = 1; i <= nSerie; i++) {
+            fatorial *= i;
+            somaSerie += 1.0 / fatorial;
+        }
+        System.out.println("Valor de S: " + somaSerie);
+
+        // ------------------------------
+        // Exercício 45 - Potenciação
+        // ------------------------------
+        System.out.println("\nExercício 45");
+        System.out.print("Digite o valor de X: ");
+        double xPot = sc.nextDouble();
+        System.out.print("Digite o valor de Z: ");
+        double zPot = sc.nextDouble();
+        double resultadoPotencia = Math.pow(xPot, zPot);
+        System.out.println(xPot + " elevado a " + zPot + " = " + resultadoPotencia);
+
+    }
+}
